@@ -8,7 +8,7 @@ namespace Northwind.DAL.Entities
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryID { get; set; }
-        [Required]
+        [Required, MaxLength(15)]
         public string CategoryName { get; set; }
         public string? Description { get; set; }
         public string? Image { get; set; }

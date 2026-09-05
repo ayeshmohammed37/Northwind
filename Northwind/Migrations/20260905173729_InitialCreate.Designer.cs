@@ -11,7 +11,7 @@ using Northwind.DAL.NorthwindDbContext;
 
 namespace Northwind.Migrations
 {
-    [DbContext(typeof(NorthwindDbContext))]
+    [DbContext(typeof(NorthwindContext))]
     [Migration("20260905173729_InitialCreate")]
     partial class InitialCreate
     {

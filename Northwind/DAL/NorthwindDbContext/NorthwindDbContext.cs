@@ -3,7 +3,7 @@ using Northwind.DAL.Entities;
 
 namespace Northwind.DAL.NorthwindDbContext
 {
-    public class NorthwindDbContext : DbContext
+    public class NorthwindContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

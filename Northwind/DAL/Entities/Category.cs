@@ -10,12 +10,16 @@ namespace Northwind.DAL.Entities
         {
             Products = new HashSet<Product>();
         }
+
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryID { get; set; }
+        
         [Required, MaxLength(15)]
         public string CategoryName { get; set; }
+        
         [Column(TypeName ="ntext")]
         public string? Description { get; set; }
+        
         [Column(TypeName ="image")]
         public byte[]? Picture { get; set; }
 

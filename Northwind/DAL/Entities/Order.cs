@@ -14,7 +14,7 @@ namespace Northwind.DAL.Entities
         [Key]
         public int OrderID { get; set; }
 
-        [Column(TypeName ="nchar(5"), StringLength(5)]
+        [Column(TypeName ="nchar(5)"), StringLength(5)]
         [ForeignKey("Customer")]
         public string? CustomerID { get; set; }
         

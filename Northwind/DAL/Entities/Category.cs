@@ -6,12 +6,18 @@ namespace Northwind.DAL.Entities
     [Table("Categories")]
     public class Category
     {
+        public Category()
+        {
+            Products = new HashSet<Product>();
+        }
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryID { get; set; }
         [Required, MaxLength(15)]
         public string CategoryName { get; set; }
+        [Column(TypeName ="ntext")]
         public string? Description { get; set; }
-        public string? Image { get; set; }
+        [Column(TypeName ="image")]
+        public byte[]? Picture { get; set; }
 
         // Navigation Properties
         public virtual ICollection<Product> Products { get; set; }
